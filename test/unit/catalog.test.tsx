@@ -1,17 +1,12 @@
 import React from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { render, screen, waitFor, within } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { Catalog } from '../../src/client/pages/Catalog';
 import { BrowserRouter } from 'react-router-dom';
 import { ProductDetails } from '../../src/client/components/ProductDetails';
 import { ProductItem } from '../../src/client/components/ProductItem';
 import '@testing-library/jest-dom'
-
-// **Каталог:**
-// +++ в каталоге должны отображаться товары, список которых приходит с сервера
-// +++ для каждого товара в каталоге отображается название, цена и ссылка на страницу с подробной информацией о товаре
-// +++ на странице с подробной информацией отображаются: название товара, его описание, цена, цвет, материал и кнопка "добавить в корзину"
 
 const initialState = {
   products: [
